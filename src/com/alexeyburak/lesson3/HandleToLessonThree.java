@@ -1,23 +1,33 @@
-### Introduction
+package com.alexeyburak.lesson3;
 
-In this lesson, we will learn how to ***send photos*** located in a local directory.
+import com.alexeyburak.Bot;
+import org.springframework.util.ResourceUtils;
+import org.telegram.telegrambots.bots.TelegramLongPollingBot;
+import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
+import org.telegram.telegrambots.meta.api.methods.send.SendPhoto;
+import org.telegram.telegrambots.meta.api.objects.InputFile;
+import org.telegram.telegrambots.meta.api.objects.Update;
+import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
-If you didn't open the [Lesson 1](sendMessages.md), don't forget to make a `Bot` class with a `token` and `name` of the bot, as well as connect libraries.
+import java.io.File;
+import java.io.FileNotFoundException;
 
-### Process 
+/**
+ * Bot tutorial
+ * Created by Alexey Burak
+ */
 
-The main function remains unchanged, so just copy it in [previous lessons](markups.md)
-
-Let's look at the `HandlerToLessonThree` class.
-
-We still need to *Override* `onUpdateReceived` method
-
-Let's do a simple processing of the received messages
-
-> When writing "want picture", the user will receive a photo
-
-```java
 public class HandleToLessonThree extends TelegramLongPollingBot {
+
+    @Override
+    public String getBotUsername() {
+        return Bot.USERNAME;
+    }
+
+    @Override
+    public String getBotToken() {
+        return Bot.TOKEN;
+    }
 
     @Override
     public void onUpdateReceived(Update update) {
@@ -41,15 +51,7 @@ public class HandleToLessonThree extends TelegramLongPollingBot {
             }
         }
     }
-}
-```
 
-It remains only to write the method of sending the photo itself
-
-```java
-public class HandleToLessonThree extends TelegramLongPollingBot {
-    // Previous methods
-    
     public void sendPhoto(Update update, String imagePath) throws TelegramApiException, FileNotFoundException {
         // Initialization sendPhoto
         SendPhoto sendPhoto = new SendPhoto();
@@ -64,13 +66,3 @@ public class HandleToLessonThree extends TelegramLongPollingBot {
         execute(sendPhoto);
     }
 }
-```
-
-You can find all the code [here](https://github.com/alexeyburak/telegram-bot-tutorial/tree/main/src/com/alexeyburak/lesson3)
-
-As a result, we get a bot that, when entering a command, sends photos from the local directory
-
-![Show Work](images/lesson3/example.png)
-
-Back to [Lesson 2](markups.md) of getting Keyboard Markup  
-Go to [Lesson 4](sendMusic.md) of sending music from local directory
