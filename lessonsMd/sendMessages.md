@@ -34,7 +34,7 @@ After we have connected all the necessary dependencies, we can proceed with the 
 
 First, let's create the main class.
 
-> new Handler() is our class, so there is no need to import the proposed library
+> new HandlerToLessonOne() is our class, so there is no need to import the proposed library
 ```java
 public class Main {
 
@@ -121,5 +121,5 @@ After that, our bot is ready to work and will return the message you wrote!
 
 ![Show Work](images/lesson1/showWork.png)
 
-Back to [Lesson 0](creatingBot.md)  
-Go to [Lesson 2](markups.md)
+Back to [Lesson 0](creatingBot.md) of creating a bot in BotFather  
+Go to [Lesson 2](markups.md) of making buttons in the keyboard field
