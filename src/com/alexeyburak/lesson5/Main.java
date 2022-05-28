@@ -1,7 +1,7 @@
 package com.alexeyburak.lesson5;
 
 /**
- * Barman
+ * Bot tutorial
  * Created by Alexey Burak
  */
 

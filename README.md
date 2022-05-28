@@ -22,3 +22,4 @@ If you got here and don't have any idea how to develop a bot, then I recommend s
 * [Telegram Bot API](https://core.telegram.org/bots/api) from the telegram itself
 * [Java Library](https://github.com/rubenlagus/TelegramBots) to download it to your IDE
 * [Tutorial from rubenlagus](https://github.com/rubenlagus/TelegramBotsExample)
+* [Emoji Manager](https://github.com/vdurmont/emoji-java) to use all the emojis that are in telegram
