@@ -1,21 +1,21 @@
-### Introduction
+package com.alexeyburak.lesson4;
 
-In this lesson, we will learn how to ***send photos*** located in a local directory.
+import com.alexeyburak.Bot;
+import org.springframework.util.ResourceUtils;
+import org.telegram.telegrambots.bots.TelegramLongPollingBot;
+import org.telegram.telegrambots.meta.api.methods.send.SendAudio;
+import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
+import org.telegram.telegrambots.meta.api.objects.InputFile;
+import org.telegram.telegrambots.meta.api.objects.Update;
+import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
-If you didn't open the [Lesson 1](sendMessages.md), don't forget to make a `Bot` class with a `token` and `name` of the bot, as well as connect libraries.
+import java.io.FileNotFoundException;
 
-### Process
+/**
+ * Bot tutorial
+ * Created by Alexey Burak
+ */
 
-The main function remains unchanged, so just copy it in [previous lessons](markups.md)
-
-Let's look at the `HandlerToLessonFour` class
-
-We still need to *Override* `onUpdateReceived` method
-
-Let's take `onUpdateReceived` method from the last lesson and just change the name of the command
-
-> We should get something like this:
-```java
 public class HandleToLessonFour extends TelegramLongPollingBot {
 
     @Override
@@ -50,17 +50,6 @@ public class HandleToLessonFour extends TelegramLongPollingBot {
         }
 
     }
-}
-```
-
-It remains only to write the method of sending the music itself from the local directory
-
-> Don't forget to set chat id when we're sending something
-
-```java 
-public class HandleToLessonFour extends TelegramLongPollingBot {
-
-    // Previous methods
 
     private void sendMusic(Update update, String fileName, SendMessage sendMessage) throws FileNotFoundException, TelegramApiException {
         // Initialization sendAudio
@@ -80,13 +69,3 @@ public class HandleToLessonFour extends TelegramLongPollingBot {
         execute(sendAudio);
     }
 }
-```
-
-You can find all the code [here](https://github.com/alexeyburak/telegram-bot-tutorial/tree/main/src/com/alexeyburak/lesson4)
-
-As a result, we get a bot that, when entering a command, sends tracks from the local directory
-
-![Show Work](images/lesson4/showWork.png)
-
-Back to [Lesson 3](sendPhoto.md) of sending photos from the local directory  
-Go to [Lesson 5](savePhotoFile.md) of saving files to the local directory

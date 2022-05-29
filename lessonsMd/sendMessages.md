@@ -24,7 +24,31 @@ Next, let's connect all the necessary libraries that will be needed when creatin
 
 As for the *maven*, you should go to this repository and ***add*** maven dependency.
 
-[Java Library](https://github.com/rubenlagus/TelegramBots) to copy maven dependency
+* [Java Library](https://github.com/rubenlagus/TelegramBots) to get last version of maven dependency
+
+You can also copy from here:
+
+```maven dependency
+<dependency>
+    <groupId>org.telegram</groupId>
+    <artifactId>telegrambots</artifactId>
+    <version>6.0.1</version>
+</dependency>
+```
+
+Also in the future we will need methods from Java Spring, so we will also connect the library
+
+* [Spring Library](https://github.com/springfox/springfox) to get last version of spring dependency
+
+You can also copy from here:
+    
+``` maven dependency
+<dependency>
+    <groupId>io.springfox</groupId>
+    <artifactId>springfox-boot-starter</artifactId>
+    <version>3.0.0</version>
+</dependency>
+```
 
 To add a dependency, you need to go into the **project structure**, then the **libraries**, click **plus** and **insert** the maven dependency
 
