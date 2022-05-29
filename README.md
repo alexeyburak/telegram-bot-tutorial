@@ -1,11 +1,14 @@
 # Introduction
 
+
+[![Book Status](https://img.shields.io/badge/book-passing-brightgreen.svg)](https://alexey-burak.gitbook.io/telegram-bot-tutorial/)
+
 Hello to everyone who has been looking for a 
 long time how to do basic actions for your telegram bot! This tutorial will cover the implementation 
 of the *basic functions* that you need to perform a *simple* bot.  
 
 I assume you already *know Java* programming language.  
-  
+
 If you got here and don't have any idea how to develop a bot, then I recommend *starting* ***with lesson 0!***
 
 In this tutorial I will use next *characteristics*:
