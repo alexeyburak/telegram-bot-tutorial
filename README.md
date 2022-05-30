@@ -9,7 +9,8 @@ of the *basic functions* that you need to perform a *simple* bot.
 
 I assume you already *know Java* programming language.  
 
-If you got here and don't have any idea how to develop a bot, then I recommend *starting* ***with lesson 0!***
+If you got here and don't have any idea how to develop a bot, then I recommend *starting* ***[with Lesson 0](lessonsMd/creatingBot.md)*** description creating a bot in telegram, namely working with *BotFather*
+
 
 In this tutorial I will use next *characteristics*:
 * My home *macOS* laptop with IntelliJ Idea pre-installed
