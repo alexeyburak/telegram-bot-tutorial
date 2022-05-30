@@ -1,6 +1,6 @@
 ### Introduction
 
-In this lesson, we will learn how to ***send photos*** located in a local directory.
+In this lesson, we will learn how to ***send tracks*** located in a local directory.
 
 If you didn't open the [Lesson 1](sendMessages.md), don't forget to make a `Bot` class with a `token` and `name` of the bot, as well as connect libraries.
 
